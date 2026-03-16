@@ -6,7 +6,7 @@ import parking.system.application.usecase.RegisterVehicleEntryUseCase;
 import parking.system.domain.model.VehicleModel;
 
 @RestController
-@RequestMapping("/parking")
+@RequestMapping("/parkings")
 @CrossOrigin(origins = "*")
 public class ParkingController {
     private final RegisterVehicleEntryUseCase registerVehicleEntryUseCase;
