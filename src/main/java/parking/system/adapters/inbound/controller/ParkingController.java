@@ -5,6 +5,8 @@ import org.springframework.web.servlet.function.EntityResponse;
 import parking.system.application.usecase.RegisterVehicleEntryUseCase;
 import parking.system.domain.model.VehicleModel;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/parking")
 @CrossOrigin(origins = "*")
@@ -18,5 +20,10 @@ public class ParkingController {
     @PostMapping("/park")
     private VehicleModel parkCar(@RequestBody VehicleModel vehicle){
         return registerVehicleEntryUseCase.park(vehicle);
+    }
+
+    @GetMapping("/findAll")
+    private List<VehicleModel> findAll(){
+        return registerVehicleEntryUseCase.findAll();
     }
 }
