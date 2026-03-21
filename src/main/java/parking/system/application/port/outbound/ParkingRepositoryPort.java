@@ -7,4 +7,6 @@ import java.util.List;
 public interface ParkingRepositoryPort {
     VehicleModel park(VehicleModel vehicleModel);
     List<VehicleModel> findAll();
+
+    long countParked();
 }

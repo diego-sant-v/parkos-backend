@@ -26,4 +26,9 @@ public class ParkingController {
     private List<VehicleModel> findAll(){
         return registerVehicleEntryUseCase.findAll();
     }
+
+    @GetMapping("/countParked")
+    private long countParked(){
+        return registerVehicleEntryUseCase.countParked();
+    }
 }

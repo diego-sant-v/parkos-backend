@@ -25,4 +25,9 @@ public class ParkingRepositoryAdapter implements ParkingRepositoryPort {
     public List<VehicleModel> findAll(){
         return repository.findAll();
     }
+
+    @Override
+    public long countParked(){
+        return repository.count();
+    }
 }

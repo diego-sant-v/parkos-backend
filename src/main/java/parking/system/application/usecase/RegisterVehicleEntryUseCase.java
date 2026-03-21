@@ -21,4 +21,8 @@ public class RegisterVehicleEntryUseCase {
     public List<VehicleModel> findAll(){
         return parkingRepositoryPort.findAll();
     }
+
+    public long countParked(){
+        return parkingRepositoryPort.countParked();
+    }
 }

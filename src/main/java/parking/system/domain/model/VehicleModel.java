@@ -8,6 +8,7 @@ import parking.system.domain.enums.PreferredSectorEnum;
 import java.util.UUID;
 
 @Entity
+@Table(name = "vehicle")
 public class VehicleModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -26,7 +27,7 @@ public class VehicleModel {
     private FuelEnum fuel;
     @Enumerated(EnumType.STRING)
     private PreferredSectorEnum preferredSector;
-    private int year;
+    private int manufactureYear;
 
     public UUID getId() {
         return id;
@@ -100,12 +101,12 @@ public class VehicleModel {
         this.preferredSector = preferredSector;
     }
 
-    public int getYear() {
-        return year;
+    public int getManufactureYear() {
+        return manufactureYear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setManufactureYear(int manufactureYear) {
+        this.manufactureYear = manufactureYear;
     }
 
     public String getPhotoUrl() {
